@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;1,200;1,300;1,400;1,500&display=swap');
+*{margin: 0;
+padding: 0;}
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+header {
+    color: azure;
+    font-family: Montserrat;
+    font-weight: 500;
+    font-size: 24px;
+    background: cadetblue;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    border-bottom: 2px solid white;
+}
+main {
+    background: cornflowerblue;
+    flex-grow: 1;
+}
+footer{
+    background: cadetblue;
+    flex-shrink: 0;
+}
+nav {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    float: right;
+    margin-right: 40px;
+    align-self: center;
+}
+nav a{
+    margin-left: 25px;
+}
+header .logo{
+    align-self: center;
+    margin-left: 35px;
+}
+.block1{
+    background: silver;
+    width: 50%;
+    /* height: 250px; */
+    margin: 50px;
+    display: flex;
+    border-radius: 10px;
+    box-shadow: 0.4em 0.4em 5px rgb(122 122 122 / 50%);
+}
+main p{
+        align-self: center;
+    margin: 20px;
+}
+.block2{
+    background: silver;
+    display: flex;
+    border-radius: 10px;
+    box-shadow: 0.4em 0.4em 5px rgb(122 122 122 / 50%);
+    float: right;
+    margin: 10px;
+    padding: 5px;
+    font-family: Montserrat;
+}
+.block2 h2{
+    margin: 5px;
+    text-align: center;
+}
+.blockcenter{
+display: flex;
+    justify-content: space-between;
+    margin: 50px;
+}
+.block2 label{
+    text-align: center;
+display: flex;
+}
+.block2 textarea{
+    text-align: center;
+display: flex;
+    padding:10px;
+  border-radius:7px;
+}
+.block2 input{
+  border-radius:7px;
+}
+/* на маленьких устройствах 1 слайд */
+.itc-slider__item {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+

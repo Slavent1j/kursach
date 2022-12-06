@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ISP|DESK</title>
+    <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
+    {% block head %}
+    {% endblock %}
+</head>
+<body>
+  <body>
+<header>
+  <nav>
+    <a>О нас</a>
+    <a href="{% url 'contacts' %}">Контакты</a>
+    <a>Услуги</a>
+    <a href="{% url 'login' %}">Личный кабинет</a>
+  </nav>
+    <div class="logo"><a href="{% url 'home' %}">logo</a></div>
+</header>
+<main>
+    {% block content %}
+    {% endblock %}
+</main>
+<footer>
+<div>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores laudantium quidem totam velit
+</div>
+</footer>
+</body>
+</html>

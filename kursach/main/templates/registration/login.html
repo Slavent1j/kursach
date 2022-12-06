@@ -1,0 +1,44 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}
+    Логин
+{% endblock %}
+
+{% block head %}
+    <style>
+
+    </style>
+{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <h1>Авторизация на сайте</h1>
+
+        {% if form.errors %}
+            {% for field, errors in form.errors.items %}
+                {% for error in errors %}
+                    <div class="alert alert-warning" role="alert">
+                        {{ error }}
+                    </div>
+                {% endfor %}
+            {% endfor %}
+        {% endif %}
+
+        <form action="{% url 'login' %}" method="post">
+            <ul>
+                <li>Логин</li>
+                <li>
+                    {{ form.username }}
+                </li>
+                <li>Пароль</li>
+                <li>
+                    {{ form.password }}
+                </li>
+            </ul>
+            {% csrf_token %}
+            <button type="submit" class="btn btn-outline-light">ВОЙТИ</button>
+            <a href="{% url 'register' %}" class="btn btn-outline-light">ЗАРЕГИСТРИРОВАТЬСЯ</a>
+            <a href="#" class="passres">Забыли пароль?</a>
+        </form>
+    </div>
+{% endblock %}
